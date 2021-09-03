@@ -25,7 +25,7 @@ const operations = document.querySelector('#operations');
 // select the button to calculate the operation (=)
 const calculateOperator = document.querySelector('#calculate');
 
-// using event delegation to listen to whatever button is
+// using event delegation to listen to whatever number button is
 // being clicked
 numbers.addEventListener('click', function(e){
 	// update some styling to see that the button is being clicked
@@ -33,11 +33,11 @@ numbers.addEventListener('click', function(e){
 	
 	if(inputOne === ''){ // check to see if the inputOne has been filled
 		// already, it hasn't been clicked if inputOne value is still ''
-		inputOne = e.target.innerText; // e.target is the element you are clicking on
-		// e.target could be <div>1</div>, <div>2,</div>,etc
+		
+		
+		// update the value of the inputOne 
 	} else {
-		// if inputOne has a value, you know its the second click
-		inputTwo = e.target.innerText; // innerText grabs the values between the tags
+		// update the value of inputTwo
 	}
 })
 
@@ -55,17 +55,16 @@ calculateOperator.addEventListener('click', function(){
 
 	// Use an if/else to find out what operation to perform 
 	if(operation === 'x'){
-		result = multiply(inputOne, inputTwo)
+		// use the functions below to update your result button
 	} else if(operation === '/'){
-		result = divide(inputOne, inputTwo)
+		
 	} else if(operation === '-'){
-		result = subtract(inputOne, inputTwo)
+	
 	} else {
-		result = add(inputOne, inputTwo)
+	
 	}
-	// update the resultDisplay 
-	resultDisplay.innerText = `Result: ${result}`;
-	resultDisplay.style.backgroundColor = 'lightblue';
+	// update the resultDisplay here
+	
 })
 
 
